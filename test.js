@@ -4,7 +4,8 @@ const assert = require('assert');
 
 function ejecutarCalculadora(args) {
     // Ejecutar calculator.js con los argumentos proporcionados y capturar la salida
-    const resultado = execSync(`node calculator.js ${args.join(' ')}`, {
+    const resultado = execSync(`node calculator.js ${args.map(arg => `"${arg}"`).join(' ')}`, {
+
         encoding: 'utf8',
         stdio: 'pipe'
     });

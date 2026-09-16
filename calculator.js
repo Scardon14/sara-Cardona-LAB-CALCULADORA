@@ -30,33 +30,29 @@ let result;
 // - Asegúrate de usar el operador de igualdad estricta (===) para comparar
 // tanto el valor como el tipo de la entrada.
 // Esto ayuda a evitar errores causados por la conversión automática de tipos de JavaScript.
-// Escribe tu primera condición a continuación
-//_________________________________________
 
-// Continúa con la siguiente condición
-//_________________________________________
+// Condicion
 
-// Agrega más condiciones
-//_________________________________________
+if (operator === "+") {
+    result = num1 + num2;
+} else if (operator === "-") {
+    result = num1 - num2;
+} else if (operator === "*") {
+    result = num1 * num2;
+} else if (operator === "/") {
+    if (num2 !== 0) {
+        result = num1 / num2;
+    } else {
+        console.log("No se puede dividir por cero");
+    }
+} else {
+    console.log("Operador inválido");
+}
+
+if (result !== undefined) {
+    console.log(result);
+}
 
 // Bonus: Maneja el caso donde el segundo número es 0 durante la división
 // Si el operador no es válido, almacena "Operador inválido" en el resultado
 
-// Paso 3: Imprimir el resultado
-if(operator === "+"){
-    result = num1 + num2;
-}else if(operator === "-"){
-    result = num1 - num2;
-}else if(operator === "*"){
-    result = num1 * num2;
-}else if(operator === "/"){
-    if(num2 !== 0){
-        result = num1 / num2;
-    } else{
-        console.log("No se puede dividir por 0");
-        
-    }
-} else{
-    console.log("Operador invalido, usa ' +, -, *, / '");
-}
-console.log(`Redultado: ${result}`);
